@@ -1,0 +1,23 @@
+{
+  "name": "graphql-typesscript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "watch": "tsc -w",
+    "dev": "nodemon build/index.js"
+  },
+  "dependencies": {
+    "apollo-server": "^2.25.0",
+    "class-validator": "^0.13.1",
+    "graphql": "^15.5.0",
+    "reflect-metadata": "^0.1.13",
+    "type-graphql": "^1.1.1",
+    "uuidv4": "^6.2.10"
+  },
+  "devDependencies": {
+    "@types/node": "^15.12.2",
+    "nodemon": "^2.0.7",
+    "typescript": "^4.3.2"
+  }
+}

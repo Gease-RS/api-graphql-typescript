@@ -1,0 +1,75 @@
+yarn init -yarn
+
+npm i graphql class-validator type-graphql
+
+npm i reflect-metadata
+
+yarn add typescript @types/node nodemon -D
+
+npx tsc --init
+
+yarn add apollo-server
+
+*pasta build
+yarn watch 
+
+***********************
+***** PlayGround ******
+***********************
+query {
+  getRecipes {  
+     id,
+    name
+  }
+}
+
+***********************
+mutation {
+  createRecipe(data: {
+    name: "Bolo de cenoura",
+    description: "Um delicioso bolo",
+    ingredients: ["Ovos", "Cenouras", "Farinha"]
+  }) {
+   recipe {
+     id
+    name
+    description
+    ingredients
+  },
+  error
+  success
+  }
+}
+
+***********************
+mutation {
+  deleteRecipe(id: "6aeffa30-5d75-4810-a1c0-19f2368b8a70") {
+    recipe {
+      id
+    }
+    error
+    success
+  }
+}
+
+***********************
+mutation {
+  updateRecipe(
+    data: {
+    name: "Bolo de Prestigio",
+    description: "Um delicioso bolo",
+    ingredients: ["Mandioca", "limão", "Farinha"]
+  	},
+    id: "381758de-2ddb-4ce2-84eb-f475d842249d"
+  	) {
+    recipe { 
+      id 
+    name
+    description 
+    ingredients
+    }
+    error
+    success
+  }
+}
+***********************
